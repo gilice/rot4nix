@@ -63,11 +63,12 @@
               cargo-about
               upx
 
-              # needed for SSL
-              openssl
-              pkg-config
+              #! needed for SSL, uncomment if you want it
+              #openssl
+              #pkg-config
 
               git
+              convco
             ];
 
           RUST_SRC_PATH = "${pkgs.rust.packages.stable.rustPlatform.rustLibSrc}";
