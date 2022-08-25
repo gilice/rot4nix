@@ -1,0 +1,16 @@
+Overview of licenses:
+{{#each overview}}
+{{name}} (#{{id}}): ({{count}})
+{{/each}}
+
+
+All text:
+{{#each licenses}}
+- {{name}} (#{{id}})
+    - Used by:
+    {{#each used_by}}
+        - {{crate.name}} ({{#if crate.repository}}{{crate.repository}}{{else}}https://crates.io/crates/{{crate.name}}{{/if}}, version {{crate.version}})
+    {{/each}}
+    
+    {{text}}
+{{/each}}
